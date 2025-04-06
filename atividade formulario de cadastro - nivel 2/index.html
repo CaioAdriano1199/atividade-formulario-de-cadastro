@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="scrip.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="navega">Cadastro</a>
+        <a href="detalhes.html" class="navega">Exibir Dados</a>
+    </nav>
+
+
+    <div class="cadastro">
+        <h1>Cadastro</h1>
+        <div class="campos">
+            <p>Nome</p>
+            <input type="text" id="nome" >
+        </div>
+        <div class="campos">
+            <p>Email</p>
+            <input type="text" id="email" >
+        </div>
+        <div class="campos">
+            <p>Idade</p>
+            <input type="number" id="idade" >
+        </div>
+        <div class="grid text-left">
+            <button type="button" class="btn btn-secondary " id="cadastrar">Cadastrar</button>
+            <button type="button" class="btn btn-secondary g-col-6" id="limpar">Limpar</button>
+        </div>
+    </div>
+    <script src="scrip.js"></script>
+</body>
+</html>
