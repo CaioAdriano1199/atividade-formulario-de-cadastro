@@ -1,0 +1,93 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.campos {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cadastro {
+    display: flex;
+    width: 600px;
+    background-color: rgb(212, 210, 210);
+    border-radius: 6px;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    padding: 20px;
+    margin: 0px auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+button {
+    background-color: darkgray;
+    border: none;
+    border-radius: 3px;
+    font-size: large;
+    padding: 8px;
+    width: 48%;
+}
+
+input {
+    width: 97%;
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+}
+
+nav {
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 8%;
+}
+
+
+h1 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+p {
+    font-size: medium;
+}
+
+a {
+    color: black;
+    padding: 10px;
+    background-color: rgb(107, 107, 107);
+    border-radius: 4px;
+    margin: 8px;
+    text-decoration: none;
+}
+
+body {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border: 2px solid rgb(255, 255, 255);
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+th,
+td {
+    border: 2px solid black;
+    border-radius: 6px;
+}

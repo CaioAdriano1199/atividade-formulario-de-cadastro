@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>    
+    <nav>
+        <a href="index.html">Cadastro</a>
+        <a href="detalhes.html">Exibir Dados</a>
+    </nav>
+    <div class="cadastro">
+    <h1>Cadastros</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>idade</th>
+            </tr>
+        </thead>
+        <tbody id="tabela">
+
+        </tbody>
+    </table>
+</div>
+</body>
+<script>
+    window.onload = function(){
+        let conttabela = document.getElementById("tabela");
+        conttabela.innerHTML = "";
+
+        let usuario = JSON.parse(localStorage.getItem("usuario")) || [];
+
+        usuario.forEach((cadastro, index) => {
+            let linha = document.createElement("tr");
+
+            linha.innerHTML = `
+        <td>${cadastro.nome}</td>
+        <td>${cadastro.email}</td>
+        <td>${cadastro.idade}</td>
+        
+            `;
+            conttabela.appendChild(linha);
+        });
+    }
+</script>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Cadastro</a>
+        <a href="detalhes.html">Exibir Dados</a>
+    </nav>
+
+
+    <div class="cadastro">
+        <h1>Cadastro</h1>
+        <div class="campos">
+            <p>Nome</p>
+            <input type="text" id="nome" required>
+        </div>
+        <div class="campos">
+            <p>email</p>
+            <input type="text" id="email" required>
+        </div>
+        <div class="campos">
+            <p>idade</p>
+            <input type="number" id="idade" required>
+        </div>
+        <div class="botoes">
+            <button id="cadastrar">Cadastrar</button>
+            <button id="limpar">Limpar</button>
+        </div>
+    </div>
+</body>
+<script>
+document.getElementById("cadastrar").addEventListener("click", function () {
+
+let nome = document.getElementById("nome").value;
+let email = document.getElementById("email").value;
+let idade = document.getElementById("idade").value;
+
+if (!nome || !email || !idade) {
+    alert("Preencha todos os campos!");
+    return;
+}
+
+let cadastro = {
+    nome: nome,
+    email: email,
+    idade: idade
+};
+
+
+let usuarios = JSON.parse(localStorage.getItem("usuario"));
+
+if (!Array.isArray(usuarios)) {
+    usuarios = [];
+}
+
+usuarios.push(cadastro);
+
+localStorage.setItem("usuario", JSON.stringify(usuarios));
+alert("Cadastro efetuado!");
+limpacampo();
+});
+
+document.getElementById("limpar").addEventListener("click", function () {
+limpacampo();
+});
+
+function limpacampo() {
+document.getElementById("nome").value = "";
+document.getElementById("email").value = "";
+document.getElementById("idade").value = "";
+}
+</script>
+
+</html>
