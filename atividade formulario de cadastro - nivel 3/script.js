@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const email = document.getElementById("email").value.trim();
       const idade = parseInt(document.getElementById("idade").value.trim());
   
-      if (!nome || !email || isNaN(idade)) {
+      if (!nome || !email || !idade) {
         alert("Preencha todos os campos corretamente!");
         return;
       }
@@ -20,8 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
         const resultado = await resposta.json();
         alert(resultado.mensagem || "Cadastrado com sucesso!");
-  
-        // limpa os campos
+
         document.getElementById("nome").value = "";
         document.getElementById("email").value = "";
         document.getElementById("idade").value = "";
@@ -30,6 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error(erro);
       }
     });
+    document.getElementById("limpar").addEventListener("click", async() =>{
+      document.getElementById("nome").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("idade").value = "";
+    })
   });
   document.addEventListener("DOMContentLoaded", async () => {
     if (window.location.pathname.includes("detalhes.html")) {
